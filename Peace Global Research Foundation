@@ -1,0 +1,76 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { Globe, BookOpen, Users } from "lucide-react";
+
+export default function PeaceGlobalResearchFoundation() {
+  return (
+    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-100 p-6">
+      <header className="text-center mb-10">
+        <motion.h1 
+          className="text-4xl font-bold mb-4 text-gray-800" 
+          initial={{ opacity: 0, y: -20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.6 }}
+        >
+          Peace Global Research Foundation
+        </motion.h1>
+        <p className="text-lg text-gray-600">
+          Promoting Peace, Knowledge, and Global Cooperation
+        </p>
+      </header>
+
+      <main className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <motion.div 
+          className="col-span-1" 
+          whileHover={{ scale: 1.05 }}
+        >
+          <Card className="rounded-2xl shadow-lg">
+            <CardContent className="p-6 text-center">
+              <Globe className="h-12 w-12 mx-auto text-blue-600 mb-4" />
+              <h2 className="text-xl font-semibold mb-2">Our Vision</h2>
+              <p className="text-gray-600">
+                To build a peaceful and inclusive world through research, dialogue, and collaboration.
+              </p>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        <motion.div 
+          className="col-span-1" 
+          whileHover={{ scale: 1.05 }}
+        >
+          <Card className="rounded-2xl shadow-lg">
+            <CardContent className="p-6 text-center">
+              <BookOpen className="h-12 w-12 mx-auto text-green-600 mb-4" />
+              <h2 className="text-xl font-semibold mb-2">Our Mission</h2>
+              <p className="text-gray-600">
+                Advancing peace and understanding through high-quality research, education, and outreach programs.
+              </p>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        <motion.div 
+          className="col-span-1" 
+          whileHover={{ scale: 1.05 }}
+        >
+          <Card className="rounded-2xl shadow-lg">
+            <CardContent className="p-6 text-center">
+              <Users className="h-12 w-12 mx-auto text-purple-600 mb-4" />
+              <h2 className="text-xl font-semibold mb-2">Join Us</h2>
+              <p className="text-gray-600">
+                Be a part of our global network of peacebuilders, researchers, and changemakers.
+              </p>
+              <Button className="mt-4">Get Involved</Button>
+            </CardContent>
+          </Card>
+        </motion.div>
+      </main>
+
+      <footer className="mt-12 text-center text-gray-500 text-sm">
+        © 2021 Peace Global Research Foundation. All rights reserved.
+      </footer>
+    </div>
+  );
+}
